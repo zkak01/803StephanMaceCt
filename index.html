@@ -397,6 +397,10 @@
         z-index: 1;
       }
 
+      #neighborhood {
+        z-index: 2;
+      }
+
       .section-header {
         display: flex;
         max-width: 830px;
@@ -709,6 +713,65 @@
         font-size: 17px;
       }
 
+      .neighborhood-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+      }
+
+      .neighborhood-card,
+      .remembrance-card {
+        padding: 34px;
+        border: 1px solid var(--cp-border);
+        border-radius: 16px;
+        background: var(--cp-surface);
+      }
+
+      .neighborhood-card {
+        background:
+          linear-gradient(135deg, var(--cp-highlight), transparent 58%),
+          var(--cp-surface);
+      }
+
+      .neighborhood-card p,
+      .remembrance-card p {
+        color: var(--cp-text-muted);
+        font-size: 17px;
+      }
+
+      .neighborhood-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .neighborhood-point {
+        padding: 18px;
+        border: 1px solid var(--cp-border);
+        border-radius: 12px;
+        background: var(--cp-panel);
+      }
+
+      .neighborhood-point strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 16px;
+      }
+
+      .neighborhood-point span {
+        color: var(--cp-text-muted);
+        font-size: 14px;
+      }
+
+      .remembrance-card {
+        align-self: stretch;
+      }
+
+      .remembrance-card h3 {
+        margin-top: 12px;
+      }
+
       .detail-list {
         display: grid;
         gap: 12px;
@@ -927,6 +990,7 @@
         }
 
         .hero,
+        .neighborhood-grid,
         .proximity-grid {
           grid-template-columns: 1fr;
         }
@@ -942,7 +1006,8 @@
         }
 
         .experience,
-        .amenity-grid {
+        .amenity-grid,
+        .neighborhood-list {
           grid-template-columns: 1fr;
         }
 
@@ -996,6 +1061,8 @@
         }
 
         .experience-panel,
+        .neighborhood-card,
+        .remembrance-card,
         .address-card,
         .school-card,
         .details-table,
@@ -1041,6 +1108,7 @@
         <div class="nav-links">
           <a href="#upgrades">Upgrades</a>
           <a href="#features">Features</a>
+          <a href="#neighborhood">Neighborhood</a>
           <a href="#location">Location</a>
           <a href="#details">Details</a>
           <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
@@ -1377,6 +1445,59 @@
                 <span>Water filtration and water softening systems already installed</span>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section class="section" id="neighborhood">
+          <div class="section-header reveal">
+            <span class="label">What we have loved</span>
+            <h2>Quiet evenings, easy errands, and plenty of room to get outside.</h2>
+            <p class="section-subtitle">
+              The setting offers a practical Purcellville balance: close to everyday needs and
+              commuting routes, while still feeling calm and tucked away.
+            </p>
+          </div>
+          <div class="neighborhood-grid">
+            <article class="neighborhood-card reveal">
+              <h3>A neighborhood that feels connected without feeling busy.</h3>
+              <p>
+                This part of Purcellville has been easy to love because it stays convenient for
+                groceries, gas, and access to major roads, yet becomes remarkably quiet,
+                especially at night. Nearby trails and paths make it simple to step outside for a
+                dog walk, exercise, or a longer loop through the neighborhood.
+              </p>
+              <div class="neighborhood-list">
+                <div class="neighborhood-point">
+                  <strong>Convenient daily rhythm</strong>
+                  <span>Close to errands and highway access without the feel of a busy street.</span>
+                </div>
+                <div class="neighborhood-point">
+                  <strong>Trails and paths nearby</strong>
+                  <span>Great for dog walks, exercise, and getting fresh air close to home.</span>
+                </div>
+                <div class="neighborhood-point">
+                  <strong>Family-friendly setting</strong>
+                  <span>Near schools and neighborhood routes that support everyday routines.</span>
+                </div>
+                <div class="neighborhood-point">
+                  <strong>Town and country access</strong>
+                  <span>Reach One Loudoun, Reston, or D.C., then come home to wine country.</span>
+                </div>
+              </div>
+            </article>
+            <aside class="remembrance-card reveal">
+              <span class="label">Street history</span>
+              <h3>Named in remembrance.</h3>
+              <p>
+                Stephan Mace Court is named in honor of Army Specialist Stephan L. Mace, who grew
+                up in Purcellville, attended Loudoun Valley High School, and was killed in
+                Afghanistan in 2009.
+              </p>
+              <p class="verification-note">
+                Street-name history is included as a respectful local note and should be verified
+                by buyers through local records or community sources.
+              </p>
+            </aside>
           </div>
         </section>
 
