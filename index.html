@@ -715,7 +715,6 @@
 
       .neighborhood-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
         gap: 18px;
       }
 
@@ -769,11 +768,15 @@
       }
 
       .remembrance-card {
-        align-self: stretch;
+        display: grid;
+        grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1.55fr);
+        align-items: center;
+        gap: 28px;
+        padding-block: 26px;
       }
 
       .remembrance-card h3 {
-        margin-top: 12px;
+        margin: 8px 0 0;
       }
 
       .detail-list {
@@ -994,7 +997,6 @@
         }
 
         .hero,
-        .neighborhood-grid,
         .proximity-grid {
           grid-template-columns: 1fr;
         }
@@ -1013,6 +1015,11 @@
         .amenity-grid,
         .neighborhood-list {
           grid-template-columns: 1fr;
+        }
+
+        .remembrance-card {
+          grid-template-columns: 1fr;
+          gap: 12px;
         }
 
         .cta-card {
@@ -1514,8 +1521,10 @@
               </div>
             </article>
             <aside class="remembrance-card reveal">
-              <span class="label">Street history</span>
-              <h3>Named in remembrance.</h3>
+              <div>
+                <span class="label">Street history</span>
+                <h3>Named in remembrance.</h3>
+              </div>
               <p>
                 Stephan Mace Court is named in honor of Army Specialist Stephan L. Mace, who grew
                 up in Purcellville, attended Loudoun Valley High School, and lost his life while
